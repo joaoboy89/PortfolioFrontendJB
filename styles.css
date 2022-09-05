@@ -1,0 +1,19 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+.containerHeader {
+    height: 50px;
+    weight: auto ;
+    color: #a0a4e2;
+    background-color: #000555;
+}
+
+.containerContent1 {
+    height: 200px;
+    weight: 1000px;
+    background-color: grey;
+    color: black;
+}
