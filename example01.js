@@ -1,6 +1,10 @@
 "use strict";
-let a;
-let b;
-let c = 101;
-c = "one";
-let recursos = ['memoria', 'discos', 'procesador', '10'];
+
+/*let res = ["vaca", "torolargo", "ternero"]
+let largoDeRecursos= res.map(function(unElemento){
+    if (unElemento.length >= 2){
+        return unElemento
+    }
+})
+document.getElementsByClassName(probandojs)
+console.log(largoDeRecursos(res))*/
