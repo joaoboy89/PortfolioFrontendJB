@@ -1,0 +1,71 @@
+ *{
+    margin: 0;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.letrasbienvenida {
+    color: rgb(255, 255, 255);
+    background-image: url(https://images.ctfassets.net/hrltx12pl8hq/4ACnMj4WVSOZRZt0jHu9h5/1506f652bcd70f4dc3e88219fefea858/shutterstock_739595833-min.jpg?fit=fill&w=800&h=300);
+    height: 400px;
+    padding: 0%;
+    padding-left: 20px;
+}
+
+.imagenFondoBienvenida {
+    background-image:url(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/EGPNUUFPVNBETLXUJJMNXOC35Q.jpg);
+    filter: opacity(50%);
+    height: 400px;
+    padding: 0;
+    display: flex;
+}
+
+.background-s1 {
+    color: aliceblue;
+}
+
+.background-color-nav {
+    background-color: rgba(28, 59, 212, 0.133);
+    color:aliceblue;
+}
+
+.container-fluid{
+    margin: 0%;
+    padding: 0%;
+}
+
+.section-content {
+    height: 500px;
+}
+.background-s1{
+    background-image: url(https://as1.ftcdn.net/v2/jpg/01/95/52/12/1000_F_195521217_t7dNvyz9uJu2UjGbpkxwsWLj3KGuVx8E.jpg);
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.fb-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-container {
+    padding: 0 5;
+    
+}
+
+.icon-container li { 
+    display: inline;
+
+}
+
+.icon-container li a {
+
+    padding: 15px ;
+
+}
+

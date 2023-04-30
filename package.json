@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
@@ -35,4 +36,23 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.9.4"
   }
+=======
+  "name": "portfoliofrontendjb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoboy89/PortfolioFrontendJB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaoboy89/PortfolioFrontendJB/issues"
+  },
+  "homepage": "https://github.com/joaoboy89/PortfolioFrontendJB#readme"
+>>>>>>> edfbaa0b6063985a8c3ae0dd1704b254d81471b4
 }
