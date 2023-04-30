@@ -9,7 +9,8 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class AuthService {
 
-  urlapi = 'http://localhost:3000/api';
+  urlapi = 'https://jbproyectbe.onrender.com/login';
+
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http: HttpClient, private route: Router) { 
