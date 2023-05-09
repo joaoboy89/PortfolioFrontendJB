@@ -3,15 +3,42 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  urlapi = 'https://jbproyectbe.onrender.com/login';
+  urlapi = 'http://localhost:8080/login';
+  constructor(private http: HttpClient, private router: Router) { }
 
-  currentUserSubject: BehaviorSubject<any>;
+  login(username: string, password: string): Observable<boolean> {
+    const credentials = { username: username, password: password };
+    return this.http.post<any>(this.urlapi, credentials).pipe(
+      catchError(error => {
+        console.log('Error:', error);
+        return throwError(error);
+      }),
+      map(response => {
+        if (response) {
+          // Login successful
+          return true;
+        } else {
+          // Login failed
+          return false;
+        }
+      })
+    );
+  }
+  
+}
+
+/*
+   currentUserSubject: BehaviorSubject<any>; 
 
   constructor(private http: HttpClient, private route: Router) { 
     console.log("el servicio de autenticacion esta funcionando");
@@ -30,7 +57,9 @@ export class AuthService {
   get usuarioAutenticado(){
 
      return this.currentUserSubject.value;
-  }
+  }   */
+     
+  
 
 
 
@@ -52,4 +81,3 @@ export class AuthService {
     return (localStorage.getItem('token') !== null);
 
   }*/
-}

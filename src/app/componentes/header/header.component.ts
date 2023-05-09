@@ -6,7 +6,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {/* implements OnInit {
 
   miPorfolio:any;
   constructor(private datosPorfolio:PortfolioService){}
@@ -18,6 +18,6 @@ export class HeaderComponent implements OnInit {
       this.miPorfolio = data[0];
     }
       );
-  }
+  }*/
 
 }

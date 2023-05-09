@@ -7,15 +7,18 @@ import { Page404Component } from './componentesAdicionales/page404/page404.compo
 import { PortfolioComponent } from './componentesAdicionales/portfolio/portfolio.component';
 import { LoginComponent } from './componentesAdicionales/login/login.component';
 import { GuardsGuard } from './servicios/guards.guard';
+import { RegisterComponent } from './componentesAdicionales/register/register.component';
+import { Login2Component } from './componentesAdicionales/login2/login2.component';
 
 const routes: Routes = [
-  {path: 'portfolio', component: PortfolioComponent, canActivate:[GuardsGuard]},
-  {path: 'login', component: LoginComponent},
+  {path: 'portfolio', component: PortfolioComponent, /*canActivate:[GuardsGuard]*/},
+  {path: 'login2', component: Login2Component},
+  {path: 'register', component: RegisterComponent},
   {path: 'page404', component: Page404Component},
   {path: 'inicio', component: HeaderComponent},
   {path: 'contacto', component: FooterComponent},
   {path: 'experiencias', component: BodyComponent},
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: '', redirectTo: '/login2', pathMatch: 'full'},
   {path: '**', redirectTo: '/page404'}
 
 ];

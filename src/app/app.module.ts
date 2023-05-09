@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioComponent } from './componentesAdicionales/portfolio/portfolio.component';
 import { InterceptorService } from './servicios/interceptor.service';
 import { PortfolioService } from './servicios/portfolio.service';
+import { RegisterComponent } from './componentesAdicionales/register/register.component';
+import { Login2Component } from './componentesAdicionales/login2/login2.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { PortfolioService } from './servicios/portfolio.service';
     Page404Component,
     LoginComponent,
     PortfolioComponent,
+    RegisterComponent,
+    Login2Component,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,7 @@ import { PortfolioService } from './servicios/portfolio.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [PortfolioService, {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],
+  providers: [PortfolioService /* , {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true} */ ], 
     bootstrap: [AppComponent],
 })
 export class AppModule { }

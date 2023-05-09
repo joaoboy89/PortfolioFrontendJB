@@ -1,0 +1,18 @@
+<form (submit)="onSubmit()">
+    <label>
+      email:
+      <input type="text" [(ngModel)]="email" name="email">
+    </label>
+  
+    <label>
+      Contraseña:
+      <input type="password" [(ngModel)]="password" name="password">
+    </label>
+  
+    <button type="submit">Iniciar sesión</button>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </form>
+  
