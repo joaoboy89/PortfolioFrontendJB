@@ -27,7 +27,7 @@ export class RegisterComponent {
   
     onSubmit(){
       if (this.registroDeUsuario.valid){
-        this.http.post('http://localhost:8080/register', this.registroDeUsuario.value).subscribe(
+        this.http.post('https://jbproyectbe.onrender.com/register', this.registroDeUsuario.value).subscribe(
           data => console.log('Registro exitoso', data),
         (error: any) => console.error('Error al registrar', error.error));
   

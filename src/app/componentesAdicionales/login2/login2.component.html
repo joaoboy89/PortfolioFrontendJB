@@ -1,18 +1,55 @@
-<form (submit)="onSubmit()">
-    <label>
-      email:
-      <input type="text" [(ngModel)]="email" name="email">
-    </label>
-  
-    <label>
-      Contraseña:
-      <input type="password" [(ngModel)]="password" name="password">
-    </label>
-  
-    <button type="submit">Iniciar sesión</button>
-  
-    <div *ngIf="errorMessage" class="error-message">
-      {{ errorMessage }}
+<h1 class="m-5">Iniciar Sesion</h1>
+<div class="bg-gradient">
+  <form (submit)="onSubmit()" class="m-3 bg-gradient">
+    <div class="mb-3">
+     <label class="form-label">
+       email:
+        <input type="text" [(ngModel)]="email" name="email" class="form-control">
+     </label>
     </div>
-  </form>
+    <div class="mb-3">
+    <label class="form-label">
+      Contraseña:
+      <input type="password" [(ngModel)]="password" name="password" class="form-control">
+    </label >
   
+    
+      <div *ngIf="errorMessage" class="error-message">
+       {{ errorMessage }}
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary m-3">Iniciar sesión</button>
+  
+  </form>
+  <a routerLink="/register">Registrarse</a>
+</div>
+  
+
+<!--
+<form [formGroup]="formulario"  (ngSubmit)="nviar($event)">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
+      <div *ngIf="Email?.errors && Email?.touched">
+        <p *ngIf="Email?.hasError('required')" class="text-danger">
+            El email es requerido.
+        </p>
+        <p *ngIf="Email?.hasError('email')" class="text-danger">
+            El formato del email debe ser válido
+        </p>
+      </div>  
+    </div>
+    <div class="mb-3" >
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}" 
+      type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+      <div *ngIf="Password?.errors && Password?.touched">
+      <p *ngIf="Password?.hasError('required')" class="text-danger">
+        La contraseña es requerida.
+    </p>
+      </div> 
+    </div>
+    <button type="submit" >Enviar</button>
+  </form>
+-->
